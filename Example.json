@@ -1,0 +1,34 @@
+/JSON object Example (basic only for reading)
+{
+    "emp":{
+        "name":"snoo", //object with string
+        "salary":56000, //object with number
+        "married":true //object with booleans
+
+    }
+}
+
+//JSON Array Example
+{
+    "emp":[
+        {"name":"jay","email":"jay123@gmail.com"},
+        {"name":"ronil","email":"ronil67@@gmail.com"},
+        {"name":"dev","email":"dev69@gmail.com"}
+    ]
+}
+
+//JSON nested object
+{
+    "firstname":"dev",
+    "lastname":"patel",
+    "age":"20",
+    "address":
+    {
+        "streetAddress":"c/201,rishikesh nager",
+        "city":"ahemedabad",
+        "state":"gujrat",
+        "pincode":"380013"
+    }
+
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    // JSON.parse() method
+    // syntax : JSON.parse(text[,reviver])
+    var json='{"fname":"dev","lname":"patel","scode":7}'
+    var student=JSON.parse(json)
+    document.write(student.fname+""+student.lname)
+
+
+    var j='["JAVA","PYTHON","HTML","CSS"]';
+    var data=JSON.parse(j)
+    document.write(data)
+
+
+
+    //JSON.stringify() method
+    //syntax : JSON.stringify(value)
+    var j1={fname:"dev",lname:"patel",scode:3};
+    var student1=JSON.stringify(j1)
+    document.write(student1)
+   
+</script>
+<body>
+    
+</body>
+</html>
