@@ -6,41 +6,93 @@
     <title>Document</title>
 </head>
 
-<script>
-    // JSON.parse() method
-    // syntax : JSON.parse(text[,reviver])
-    var json='{"fname":"dev","lname":"patel","scode":7}'
-    var student=JSON.parse(json)
-    document.write(student.fname+""+student.lname)
-
-
-    var j='["JAVA","PYTHON","HTML","CSS"]';
-    var data=JSON.parse(j)
-    document.write(data)
-
-
-
-    //JSON.stringify() method
-    //syntax : JSON.stringify(value)
-    var j1={fname:"dev",lname:"patel",scode:3};
-    var student1=JSON.stringify(j1)
-    document.write(student1)
-
-
-    //Q1 Write code to fetch the “Give again” value from user object.
-    const user={
-        "name":["ABC","DEF","GHI"],
-        "age":"28",
-        "course":["FSD","PYTHON","HTML"],
-        "Address":["T1","T2",{"T3":"GIVE AGAIN"}]
-    }
-    console.log(user.Address[2].T3)
-
-    //Q2 From below JSON object fetch the values as asked.
-    
-   
-</script>
 <body>
+    <script>
+        // JSON.parse() method
+        // syntax : JSON.parse(text[,reviver])
+        var json='{"fname":"dev","lname":"patel","scode":7}'
+        var student=JSON.parse(json)
+        document.write(student.fname+""+student.lname)
+    
+    
+        var j='["JAVA","PYTHON","HTML","CSS"]';
+        var data=JSON.parse(j)
+        document.write(data)
+    
+    
+    
+        //JSON.stringify() method
+        //syntax : JSON.stringify(value)
+        var j1={fname:"dev",lname:"patel",scode:3};
+        var student1=JSON.stringify(j1)
+        document.write(student1)
+    
+    
+        //Q1 Write code to fetch the “Give again” value from user object.
+        const user={
+            "name":["ABC","DEF","GHI"],
+            "age":"28",
+            "course":["FSD","PYTHON","HTML"],
+            "Address":["T1","T2",{"T3":"GIVE AGAIN"}]
+        }
+        console.log(user.Address[2].T3)
+    
+        //Q2 From below JSON object fetch the values as asked.
+        const a= {
+        'Datastructures':
+        [
+        {
+            'Name': 'tree',
+            'course':'Intro',
+            'content':['1','B','C']
+        },
+        {
+            "Name": "tree1",
+            "course":"Intro1",
+            "content":["1","B","C","d"]
+        }
+        ],
+        "xyz":
+        {
+            "Name":"Graphics",
+            "Topic":["BFS","CDF","Sorting"],
+        }
+        }
+        console.log(Datastructures[1].Name);//tree1
+        console.log(a.Datastructures[0].Name); //tree
+        console.log(a.xyz.Name);//Graphics
+        console.log(a.xyz.Topic); //['BFS', 'CDF', 'Sorting']
+        console.log(a.xyz.Topic[0]); //BFS
+        console.log(a.Datastructures[1]); // { "Name": "tree1", "course":"Intro1", "content":["1","B","C","d"] }
+        console.log(a.Name); //undefined
+        console.log(a.xyz); //{Name: 'Graphics', Topic: Array(3)}
+    
+    
+        //Q-3 Write one JSON string with date property (yyyy-mm-dd) and print date in India standard time.
+        const obj=JSON.parse(`{"name":"xyz","age":"17","dob":"1997-03-14"}`);
+        console.log(obj.dob);
+        a = new Date(obj.dob);
+        console.log(a);//Fri Mar 14 1997 05:30:00 GMT+0530 (India Standard Time)
+    </script>
+    
+    <script>
+        //Q-4 onclick question
+        function call()
+        {
+            obj=JSON.parse('{"Name":"ABC","Age":18,"City":"Ahmedabad","DOB":"1990-08-24"}');
+            obj.DOB=new Date(obj.DOB);
+            document.write(obj.DOB);
+        }
+    </script>
+    <P id="demo"></P>
+    <button onclick="call()"> ClickMe </button>
+
+    <script>
+        //Q-5 Get JSON object values using for loop
+        
+
+    </script>
+
     
 </body>
 </html>
