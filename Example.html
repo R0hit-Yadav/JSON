@@ -89,7 +89,7 @@
 
     <script>
         //Q-5 Get JSON object values using for loop
-        const sub
+        const sub=
         {
             "FSD":[
                 {
@@ -105,7 +105,56 @@
             ]
         }
         
+        for(x in sub.FSD)
+        {
+            console.log(x)
+            for(y in sub.FSD[x])
+            {
+                console.log("Y"+y)
+                document.write(sub.FSD[x][y]+"<br>")
+                console.log(sub.FSD[x][y]+"<br>")
+            }
+        }
 
+    </script>
+
+    <script>
+        //Q-6 Get json object values using for loop and make html table to display these values
+        const sub1=
+        {
+            "FSD":[
+                {
+                    "topic":"HTML",
+                    "course":"Beginer",
+                    "content":["tags","table","form"]
+                },
+                {
+                    "topic":"CSS",
+                    "course":"Beginer",
+                    "content":["tags","table","form"]
+                }
+            ]
+
+        }
+        var temp="<table border='2px solid red'>";
+            temp+="<tr>";
+                for(x in sub.FSD[0])
+                {
+                    temp+="<th>"+x+"</th>";
+                    temp+="<tr>";
+                    for(y in sub.FSD[x])
+                    {
+                        temp+="<td>"+sub.FSD[x][y]+"</td>";
+                    }
+                    temp+="</tr>"
+                }
+                temp+="</table>"
+                document.write(temp)
+                
+    </script>
+
+    <script>
+        //Q7-WRITE A JS TO sTORE AN ARRAY OF OBJECT HAVING HIGHT AND NAME DISPLAY NAMES BY STORING AN ARRAY ACCROIND TO HIGHT
     </script>
 
     
