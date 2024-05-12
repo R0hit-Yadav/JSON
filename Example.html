@@ -154,7 +154,33 @@
     </script>
 
     <script>
-        //Q7-WRITE A JS TO sTORE AN ARRAY OF OBJECT HAVING HIGHT AND NAME DISPLAY NAMES BY STORING AN ARRAY ACCROIND TO HIGHT
+        //Q7-WRITE A JS TO sTORE AN ARRAY OF OBJECT HAVING HIGHT AND NAME DISPLAY NAMES BY STORING AN ARRAY 
+        //ACCROIND TO HIGHT
+        const student2=
+            [
+            {name:"NAS",height:5.7},
+            {name:"abc",height:6.0},
+            {name:"xyz",height:7.2}
+            ]
+
+            for (let x=0;x<student2.length;x++)
+            {
+                for(let y=0;y<student2.length;y++)
+                {
+                    if(student2[x].height>student2[y].height)
+                    {
+                        var temp;
+                        temp=student2[y];
+                        student2[y]=student2[x];
+                        student2[x]=temp;
+                    }
+                }
+            }
+
+            for(let i=0;i<student2.length;i++)
+            {
+                console.log(student2[i].name,student2[i].height)
+            }
     </script>
 
     
