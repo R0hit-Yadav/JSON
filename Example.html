@@ -183,6 +183,78 @@
             }
     </script>
 
+    <script>
+        //Q8 Write a script to define two JSON objects named as “division1” and
+    // “division2” having an array to store names of students. These name
+    // should be sorted alphabetically in the object and should merge in one
+    // JSON object
+
+    var test = {
+    "division1": {"name":["Z","B","H"]},
+    "division2": {"name" :["Y","A","G"]}
+    }
+    const div1_data = test.division1.name;
+    const div2_data = test.division2.name;
+    var combine_data = div1_data.concat(div2_data).sort();
+    console.log(combine_data);
+
+    </script>
+
+    <script>
+        //Q9
+//         Write a function “KeyandValue” that takes in an array and returns an
+// object with
+// The first element of the array as the object’s key
+// The last element of the array as the key’s value.
+// Input = [‘abc’,’def’,’ghi’,’jkl’] Output = { abc: ‘jkl’ }
+
+    Function KeyandValue (a)
+    { 
+        var temp = {};
+        temp[a[0]] = a[a.length - 1];
+        return temp;
+    }
+    var data = ['abc', 'def', 'ghi', 'jkl'];
+    console.log(KeyandValue (data));
+
+    </script>
+
+    <script>
+        //Q10
+//         Write a JSON object which contains array of 3 objects. Each object
+// contains 2 properties name and age. Print details of elder person.
+
+const person =
+[
+{
+name: "NAS",
+age: 38
+},
+{
+name: "ABC",
+age: 35
+},
+{
+name: "XYZ",
+age: 47
+}
+]
+for (let x = 0; x < person.length; x++){
+var t = 0;
+for (let y = 0; y < person.length; y++){
+if (person[x].age > person[y].age) {
+t++;
+console.log(t);
+}
+}
+if (t == person.length-1) {
+var t1;
+t1 = person[x];
+console.log(t1);
+}
+}  
+    </script>
+
     
 </body>
 </html>
